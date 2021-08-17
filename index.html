@@ -1,10 +1,132 @@
 <!DOCTYPE html>
-<html>
 <head>
-	<meta charset="utf-8">
-	<title>Checking</title>
+    <title>Bilal Khalil Khankhail</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
-  <h1>Bilal Khalil Khankhail</h1>
+    <section id="home">
+        <header>
+            <div id="header_wraper">
+                <h2>Bilal Khalil Khankhail</h2>
+                <div id="menu">
+                    <ul>
+                        <li> <a href="#home">Home</a></li>
+                        <li> <a href="#skills">Skills</a></li>
+                        <li> <a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <!--========= Skills Section =========-->
+    <section id="skills">
+        <div class="wraper">
+            <div class="skills_wraper">
+                <div class="title">
+                    <h1 class="back">Skills</h1>
+                    <h1 class="front">Skills</h1>
+                </div>
+            </div>
+            <div id="progress_cards">
+                <div class="card">
+                    <div class="icon"><i class="fab fa-html5"></i></div>
+                    <div class="details">
+                        <div class="lang_perc">
+                            <h3>HTML</h3>
+                            <h3 id="perc_indicator"></h3>
+                            <label for="progress">Intermediate</label>
+                        </div>
+                        <progress id="progress" ,="" value="55" max="100"></progress>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fab fa-python"></i></div>
+                    <div class="details">
+                        <div class="lang_perc">
+                            <h3>Python</h3>
+                            <h3 id="perc_indicator"></h3>
+                            <label for="progress">Intermediate</label>
+                        </div>
+                        <progress id="progress" ,="" value="55" max="100"></progress>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fab fa-css3-alt"></i></div>
+                    <div class="details">
+                        <div class="lang_perc">
+                            <h3>CSS</h3>
+                            <h3 id="perc_indicator"></h3>
+                            <label for="progress">Intermediate</label>
+                        </div>
+                        <progress id="progress" ,="" value="55" max="100"></progress>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"> <img src="Icons\\C_Lang.svg" alt=""> </div>
+                    <div class="details">
+                        <div class="lang_perc">
+                            <h3>C Language</h3>
+                            <h3 id="perc_indicator"></h3>
+                            <label for="progress">Intermediate</label>
+                        </div>
+                        <progress id="progress" ,="" value="55" max="100"></progress>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fab fa-js-square"></i></div>
+                    <div class="details">
+                        <div class="lang_perc">
+                            <h3>JavaScript</h3>
+                            <h3 id="perc_indicator"></h3>
+                            <label for="progress">Intermediate</label>
+                        </div>
+                        <progress id="progress" ,="" value="55" max="100"></progress>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon"><i class="fab fa-java"></i></div>
+                    <div class="details">
+                        <div class="lang_perc">
+                            <h3>Java</h3>
+                            <h3 id="perc_indicator"></h3>
+                            <label for="progress">Intermediate</label>
+                        </div>
+                        <progress id="progress" ,="" value="55" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--========= Projects Section =========-->
+    <section id="projects">
+        <div class="wraper">
+            <div class="title">
+                <h1 class="back">Projects</h1>
+                <h1 class="front">Projects</h1>
+            </div>
+            <div id="projects_card">
+                <div class="card">
+                    <h2>Project 1</h2>
+                    <button>Read More</button>
+                </div>
+                <div class="card">
+                    <h2>Project 2</h2>
+                    <button>Read More</button>
+                </div>
+                <div class="card">
+                    <h2>Project 3</h2>
+                    <button>Read More</button>
+                </div>
+                <div class="card">
+                    <h2>Project 4</h2>
+                    <button>Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

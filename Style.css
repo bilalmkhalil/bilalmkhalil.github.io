@@ -1,0 +1,236 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    /* overflow-y: hidden; */
+}
+html::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --default-white-color: #ffffff;
+    --default-black-color: #000000;
+    --home-background-color: #0D0D0D;
+    --skills-background-color: #CB1A2C;
+    --projects-background-color: #1D1E4E;
+}
+
+
+/*============== Body Globals ==============*/
+
+section {
+    width: 100vw;
+    height: 100vh;
+}
+
+section#home {
+    background-color: var(--home-background-color);
+}
+
+section#skills {
+    background-color: var(--skills-background-color);
+}
+
+section#projects {
+    background-color: var(--projects-background-color);
+}
+
+.wraper {
+    width: 80%;
+    margin: auto;
+    padding-top: 120px;
+}
+
+.title {
+    height: 30vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.front {
+    position: absolute;
+    z-index: 2;
+    top: 1.2em;
+    left: 140px;
+    font-size: 120px;
+}
+
+.back {
+    font-size: 20rem;
+    font-family: Open Sans;
+    opacity: 15%;
+    position: relative;
+    z-index: 1;
+}
+
+/*============== Home ==============*/
+section#home header {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+section#home header #header_wraper {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+}
+
+section#home header #header_wraper h2 {
+    color: var(--default-white-color);
+    font-family: Tw Cen MT;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+section#home header #header_wraper #menu {
+    display: grid;
+    justify-items: end;
+}
+section#home header #header_wraper #menu li {
+    display: inline-block;
+    margin: 0 40px 0 40px;
+    font-family: Tw Cen MT;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+section#home header #header_wraper #menu ul li a {
+    color: var(--default-white-color);
+    text-decoration: none;
+}
+
+
+/*============== Skills ==============*/
+
+section#skills .wraper #progress_cards {
+    padding: 25px;
+    width: 70%;
+    margin: auto;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+section#skills .wraper #progress_cards .card {
+    /*background-color: var(--default-white-color);*/
+    width: 25vw;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 1.1fr 3fr;
+    align-items: center;
+    /*border-radius: 5px;*/
+}
+
+section#skills .wraper #progress_cards .card .icon {
+    height: 10vh;
+    background-color: var(--default-white-color);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    margin-right: 10px;
+/*    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;*/
+}
+
+section#skills .wraper #progress_cards .card .icon i {
+    font-size: 5em;
+}
+
+section#skills .wraper #progress_cards .card .icon img {
+    width: 4.5em;
+    color: blue;
+}
+
+section#skills .wraper #progress_cards .card .details {
+    padding: 5px;
+    font-family: Open Sans;
+}
+
+section#skills .wraper #progress_cards .card .details .lang_perc {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    font-size: 30px;
+    font-family: Tw Cen MT;
+}
+
+section#skills .wraper #progress_cards .card .details .lang_perc h3:nth-of-type(2) {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 2;
+    font-family: Open Sans;
+    font-size: 50px;
+}
+
+section#skills .wraper #progress_cards .card .details .lang_perc label {
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+section#skills .wraper #progress_cards .card .details progress {
+    -webkit-appearance:  none;
+    width: 100%;
+    height: 22px;
+    margin-top: 4px;
+}
+section#skills .wraper #progress_cards .card .details progress::-webkit-progress-bar {
+    border-radius: 3px;
+    background-color: var(--default-white-color);
+}
+section#skills .wraper #progress_cards .card .details progress::-webkit-progress-value {
+    border-radius: 2px;
+    background-color: var(--default-black-color);
+}
+
+/*============== Projects ==============*/
+
+section#projects .wraper #projects_card {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+section#projects .wraper #projects_card .card {
+    padding: 20px;
+    width: 230px;
+    height: 30vh;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--default-white-color);
+}
+
+section#projects .wraper #projects_card .card h2 {
+    font-family: Open Sans;
+    font-weight: bold;
+}
+
+section#projects .wraper #projects_card .card button {
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-family: Open Sans;
+    font-weight: bold;
+    color: var(--default-white-color);
+    background-color: var(--default-black-color);
+}
+
+section#projects .wraper #projects_card .card button:hover {
+    cursor: pointer;
+}
