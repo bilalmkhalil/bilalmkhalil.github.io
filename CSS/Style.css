@@ -1,3 +1,5 @@
+/*@import url('https://db.onlinewebfonts.com/c/9b62dc86f936227b3f7b367bd0b6c05e?family=Tw+Cen+MT');*/
+
 * {
     padding: 0;
     margin: 0;
@@ -30,6 +32,15 @@ section {
 
 section#home {
     background-color: var(--home-background-color);
+    /*background: 
+    radial-gradient(var(--default-white-color) 3px, transparent 4px),
+    radial-gradient(var(--default-white-color) 3px, transparent 4px),
+    linear-gradient(var(--home-background-color) 4px, transparent 0),
+    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+    var(--home-background-color);
+    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;*/
 }
 
 section#skills {
@@ -54,6 +65,7 @@ section#projects {
 
 .front {
     position: absolute;
+    font-family: Open Sans;
     z-index: 2;
     top: 1.2em;
     left: 140px;
@@ -108,6 +120,101 @@ section#home header #header_wraper #menu ul li a {
     text-decoration: none;
 }
 
+section#home #content {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /*justify-items: center;*/
+    align-content: center;
+    align-items: center;
+}
+
+section#home #content #profile_picture {
+    width: 100%;
+    height: 400px;
+    background-color: var(--default-white-color);
+    border-radius: 10px;
+}
+
+section#home #content #details {
+    width: 100%;
+    height: 400px;
+    /*background-color: lightgoldenrodyellow;*/
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /*justify-items: center;*/
+    align-items: center;
+    color: #ffffff;
+}
+
+section#home #content #details #bio {
+    margin-left: 50px;
+    font-family: Open Sans;
+}
+
+section#home #content #details #bio #name {
+    color: #0079BF;
+    font-family: Tw Cen MT;
+    font-size: 50px;
+}
+
+section#home #content #details #bio #job {
+    margin-top: 5px;
+}
+
+section#home #content #details #bio #based {
+    font-size: 22px;
+}
+
+section#home #content #details #bio #based span#country {
+    color: #009688;
+    font-family: Tw Cen MT;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+section#home #content #details #bio button {
+    width: 100px;
+    height: 40px;
+    font-family: Tw Cen MT;
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 45px;
+}
+
+section#home #content #details #bio button:hover {
+    cursor: pointer;
+}
+
+section#home #content #details #bio #contact_me {
+    width: 130px;
+    color: #007BC2;
+}
+
+section#home #content #details #bio #resume {
+    background-color: #009688;;
+    color: var(--default-white-color);
+    margin-left: 20px;
+}
+
+section#home #content #details #social_media {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+section#home #content #details #social_media #icon {
+    font-size: 2.5rem;
+    margin: 15px;
+}
+
+section#home #content #details #social_media #icon:hover {
+    cursor: pointer;
+}
 
 /*============== Skills ==============*/
 
