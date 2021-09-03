@@ -19,17 +19,17 @@
 // 	observer.observe(section);
 // });
 
-let perc = [80, 80, 75, 75, 70, 70];
+// let perc = [80, 80, 75, 75, 70, 70];
 
-let progressBars = document.querySelectorAll("#progress");
-let perc_indicator = document.querySelectorAll("#perc_indicator");
+// let progressBars = document.querySelectorAll("#progress");
+// let perc_indicator = document.querySelectorAll("#perc_indicator");
 
-for (let i = 0; i < progressBars.length; i++) {
-	progressBars[i].value = perc[i];
-	perc_indicator[i].innerHTML = perc[i] + "%";
-}
+// for (let i = 0; i < progressBars.length; i++) {
+// 	progressBars[i].value = perc[i];
+// 	perc_indicator[i].innerHTML = perc[i] + "%";
+// }
 
 
-progressBars.forEach((progress) => {
-	progress.value;
-})
+// progressBars.forEach((progress) => {
+// 	progress.value;
+// })

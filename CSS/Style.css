@@ -9,7 +9,8 @@ html {
     scroll-behavior: smooth;
     box-sizing: border-box;
     /* overflow-y: hidden; */
-}
+}   
+
 html::-webkit-scrollbar {
     display: none;
 }
@@ -22,6 +23,11 @@ html::-webkit-scrollbar {
     --projects-background-color: #1D1E4E;
 }
 
+@font-face {
+    font-family: "Aadil";
+    src: url("Fonts/Aadil.ttf") format("truetype");
+}
+
 
 /*============== Body Globals ==============*/
 
@@ -32,23 +38,14 @@ section {
 
 section#home {
     background-color: var(--home-background-color);
-    /*background: 
-    radial-gradient(var(--default-white-color) 3px, transparent 4px),
-    radial-gradient(var(--default-white-color) 3px, transparent 4px),
-    linear-gradient(var(--home-background-color) 4px, transparent 0),
-    linear-gradient(45deg, transparent 74px, transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-    linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
-    var(--home-background-color);
-    background-size: 109px 109px, 109px 109px,100% 6px, 109px 109px, 109px 109px;
-    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;*/
 }
 
 section#skills {
-    background-color: var(--skills-background-color);
+    background-color: var(--home-background-color);
 }
 
 section#projects {
-    background-color: var(--projects-background-color);
+    background-color: var(--home-background-color);
 }
 
 .wraper {
@@ -58,25 +55,37 @@ section#projects {
 }
 
 .title {
-    height: 30vh;
+    height: 250px;
     overflow: hidden;
     position: relative;
 }
 
 .front {
+    color: var(--default-white-color);
     position: absolute;
     font-family: Open Sans;
     z-index: 2;
-    top: 1.2em;
-    left: 140px;
-    font-size: 120px;
+    top: 0.95em;
+    left: 0.5em;
+    font-size: 7rem;
 }
 
 .back {
-    font-size: 20rem;
+    color: #1E1E1E;
+    font-size: 18rem;
     font-family: Open Sans;
-    opacity: 15%;
     position: relative;
+    z-index: 1;
+}
+
+.urdu {
+    color: #FAA916;
+    position: absolute;
+    font-family: Aadil;
+    direction: rtl;
+    font-size: 7rem;
+    top: 0.95em;
+    left: 3.5em;
     z-index: 1;
 }
 
@@ -134,7 +143,7 @@ section#home #content {
 section#home #content #profile_picture {
     width: 100%;
     height: 400px;
-    background-color: var(--default-white-color);
+    background-color: #1E1E1E;
     border-radius: 10px;
 }
 
@@ -207,105 +216,57 @@ section#home #content #details #social_media {
     justify-items: center;
 }
 
-section#home #content #details #social_media #icon {
+section#home #content #details #social_media .icon {
     font-size: 2.5rem;
     margin: 15px;
 }
 
-section#home #content #details #social_media #icon:hover {
+section#home #content #details #social_media .icon:hover {
     cursor: pointer;
 }
 
+
 /*============== Skills ==============*/
 
-section#skills .wraper #progress_cards {
-    padding: 25px;
-    width: 70%;
-    margin: auto;
-    height: 50vh;
+section#skills .wraper .skillsets {
+    /*background-color: rebeccapurple;*/
+    margin: 50px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
 }
 
-section#skills .wraper #progress_cards .card {
-    /*background-color: var(--default-white-color);*/
-    width: 25vw;
-    height: 10vh;
-    display: grid;
-    grid-template-columns: 1.1fr 3fr;
-    align-items: center;
-    /*border-radius: 5px;*/
+section#skills .wraper .skillsets .icon-wraper .title-icon {
+    font-size: 55px;
+    color: var(--default-white-color);
 }
 
-section#skills .wraper #progress_cards .card .icon {
-    height: 10vh;
-    background-color: var(--default-white-color);
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    border-radius: 5px;
-    margin-right: 10px;
-/*    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;*/
-}
-
-section#skills .wraper #progress_cards .card .icon i {
-    font-size: 5em;
-}
-
-section#skills .wraper #progress_cards .card .icon img {
-    width: 4.5em;
-    color: blue;
-}
-
-section#skills .wraper #progress_cards .card .details {
-    padding: 5px;
+section#skills .wraper .skillsets .icon-wraper h1 {
     font-family: Open Sans;
+    font-size: 32px;
+    color: var(--default-white-color);
+    margin-top: 15px;
 }
 
-section#skills .wraper #progress_cards .card .details .lang_perc {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    align-items: center;
-    font-size: 30px;
-    font-family: Tw Cen MT;
+section#skills .wraper .skillsets .icon-wraper .icon {
+    color: var(--default-white-color);
+    font-size: 60px;
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-section#skills .wraper #progress_cards .card .details .lang_perc h3:nth-of-type(2) {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column: 2;
-    font-family: Open Sans;
-    font-size: 50px;
-}
-
-section#skills .wraper #progress_cards .card .details .lang_perc label {
-    margin-top: 10px;
-    font-size: 25px;
-    font-weight: bolder;
-}
-
-section#skills .wraper #progress_cards .card .details progress {
-    -webkit-appearance:  none;
-    width: 100%;
-    height: 22px;
-    margin-top: 4px;
-}
-section#skills .wraper #progress_cards .card .details progress::-webkit-progress-bar {
-    border-radius: 3px;
-    background-color: var(--default-white-color);
-}
-section#skills .wraper #progress_cards .card .details progress::-webkit-progress-value {
-    border-radius: 2px;
-    background-color: var(--default-black-color);
+section#skills .wraper .skillsets .icon-wraper i:not(i:nth-of-type(1), i:nth-of-type(2)) {
+    margin: 15px 0 0 20px;
 }
 
 /*============== Projects ==============*/
 
+section#projects .wraper .title .urdu {
+    left: 5em;
+}
+
 section#projects .wraper #projects_card {
-    height: 50vh;
+    height: 60vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
@@ -315,22 +276,33 @@ section#projects .wraper #projects_card {
 section#projects .wraper #projects_card .card {
     padding: 20px;
     width: 230px;
-    height: 30vh;
+    height: 350px;
     text-align: center;
     border-radius: 10px;
-    background-color: var(--default-white-color);
+    background-color: #1E1E1E;
 }
 
-section#projects .wraper #projects_card .card h2 {
+section#projects .wraper #projects_card .card .cover {
+    height: 20vh;
+}
+
+section#projects .wraper #projects_card .card .details-options {
+    height: 10vh;
+}
+
+section#projects .wraper #projects_card .card .details-options h2 {
+    color: var(--default-white-color);
     font-family: Open Sans;
     font-weight: bold;
+    text-align: justify;
 }
 
-section#projects .wraper #projects_card .card button {
-    width: 100px;
+section#projects .wraper #projects_card .card .details-options button {
     height: 40px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin: 20px 0 0 0;
     font-size: 15px;
     font-family: Open Sans;
     font-weight: bold;
@@ -338,6 +310,6 @@ section#projects .wraper #projects_card .card button {
     background-color: var(--default-black-color);
 }
 
-section#projects .wraper #projects_card .card button:hover {
+section#projects .wraper #projects_card .card .details-options button:hover {
     cursor: pointer;
 }
