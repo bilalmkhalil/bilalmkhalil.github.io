@@ -33,3 +33,23 @@
 // progressBars.forEach((progress) => {
 // 	progress.value;
 // })
+
+const nav = document.querySelector('.nav');
+const homeSection = document.querySelector('#home');
+const skillsSection = document.querySelector('#skills');
+const projectsSection = document.querySelector('#projects');
+
+nav.addEventListener('click', function(e){
+    e.preventDefault();
+    if(e.target.classList.contains('nav-link')){
+        const id = e.target.getAttribute('href');
+        const section = document.querySelector(id);
+        const secCoords = section.getBoundingClientRect();
+
+        window.scrollTo({
+            left: secCoords.left + window.pageXOffset,
+            top: secCoords.top + window.pageYOffset,
+            behavior: "smooth",
+        });
+    }
+})
