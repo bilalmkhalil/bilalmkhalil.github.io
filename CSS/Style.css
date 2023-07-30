@@ -1,5 +1,5 @@
-/*@import url('https://db.onlinewebfonts.com/c/9b62dc86f936227b3f7b367bd0b6c05e?family=Tw+Cen+MT');*/
-
+@import url('https://db.onlinewebfonts.com/c/9b62dc86f936227b3f7b367bd0b6c05e?family=Tw+Cen+MT');
+@import url('https://fonts.googleapis.com/css2?family=REM:wght@300&family=Space+Grotesk&family=Titillium+Web:wght@600&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -18,13 +18,23 @@ html::-webkit-scrollbar {
     --default-white-color: #ffffff;
     --default-black-color: #000000;
     --home-background-color: #0D0D0D;
+    /* --home-background-color: #222222; */
     --skills-background-color: #CB1A2C;
     --projects-background-color: #1D1E4E;
+    --faded-title-color: #222222;
+
+    --text-color: #f0f0f0;
+    --background-color: #0D0D0D;
+    --primary-color: #595959;
+    --secondary-color: #1f1f1f;
+    --accent-color: #FAA916;
 }
 
 @font-face {
     font-family: "Aadil";
-    src: url("Fonts/Aadil.ttf") format("truetype");
+    src: url("../Fonts/Aadil.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -33,6 +43,7 @@ html::-webkit-scrollbar {
 section {
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 section#home {
@@ -50,7 +61,7 @@ section#projects {
 .wraper {
     width: 80%;
     margin: auto;
-    padding-top: 120px;
+    padding-top: 4rem;
 }
 
 .title {
@@ -62,7 +73,7 @@ section#projects {
 .front {
     color: var(--default-white-color);
     position: absolute;
-    font-family: Open Sans;
+    font-family: 'Titillium Web', sans-serif;
     z-index: 2;
     top: 0.95em;
     left: 0.5em;
@@ -70,9 +81,10 @@ section#projects {
 }
 
 .back {
-    color: #1E1E1E;
+    color: var(--faded-title-color);
     font-size: 18rem;
-    font-family: Open Sans;
+    font-family: 'Titillium Web', sans-serif;
+    /* font-family: Open Sans; */
     position: relative;
     z-index: 1;
 }
@@ -99,7 +111,7 @@ section#home header #header_wraper {
     margin: auto;
     padding: 40px;
     display: grid;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 3fr 2fr;
     align-items: center;
 }
 
@@ -111,25 +123,68 @@ section#home header #header_wraper h2 {
     text-transform: uppercase;
 }
 section#home header #header_wraper #menu {
-    display: grid;
-    justify-items: end;
+    display: flex;
+    /* justify-content: center; */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
 }
-section#home header #header_wraper #menu li {
-    display: inline-block;
-    margin: 0 40px 0 40px;
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.9em;
+    width: 100%;
+}
+.link-container a {
+    color: var(--text-color);
     font-family: Tw Cen MT;
-    font-size: 25px;
+    text-decoration: none;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+/* section#home header #header_wraper #menu ul{
+    display: flex;
+    align-items: center;
+    height: 3em;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+section#home header #header_wraper #menu ul li {
+    display: inline;
+    align-items: center ;
+    height: 3em;
+    margin: 0 20px 0 20px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+} */
+.active-page {
+    background-color: var(--accent-color);
+}
+.active-page a {
+    color: var(--background-color);
+    font-weight: bold;
+}
+
 section#home header #header_wraper #menu ul li a {
-    color: var(--default-white-color);
+    /* color: var(--default-white-color); */
+    font-family: Tw Cen MT;
     text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* margin: 20px; */
+    background-color: white;
+    height: 100%;    
+    width: 100%;
 }
 
 section#home #content {
-    width: 60%;
+    width: 75%;
     height: 100vh;
     margin: auto;
     display: grid;
@@ -140,6 +195,9 @@ section#home #content {
 }
 
 section#home #content #profile_picture {
+    background-image: url("../Images/profile.jpg");
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 400px;
     background-color: #1E1E1E;
@@ -149,7 +207,7 @@ section#home #content #profile_picture {
 section#home #content #details {
     width: 100%;
     height: 400px;
-    /*background-color: lightgoldenrodyellow;*/
+    /* background-color: lightgoldenrodyellow; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     /*justify-items: center;*/
@@ -159,12 +217,14 @@ section#home #content #details {
 
 section#home #content #details #bio {
     margin-left: 50px;
-    font-family: Open Sans;
+    /* font-family: 'REM', sans-serif; */
+    font-family: 'Titillium Web', sans-serif;
 }
 
 section#home #content #details #bio #name {
-    color: #0079BF;
-    font-family: Tw Cen MT;
+    color: var(--accent-color);
+    font-family: 'Space Grotesk', sans-serif;
+    /* font-family: Tw Cen MT; */
     font-size: 50px;
 }
 
@@ -172,13 +232,10 @@ section#home #content #details #bio #job {
     margin-top: 5px;
 }
 
-section#home #content #details #bio #based {
-    font-size: 22px;
-}
-
-section#home #content #details #bio #based span#country {
-    color: #009688;
-    font-family: Tw Cen MT;
+section#home #content #details #bio span#country {
+    color: var(--accent-color);
+    /* font-family: Tw Cen MT; */
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 25px;
     text-transform: uppercase;
 }
@@ -186,8 +243,8 @@ section#home #content #details #bio #based span#country {
 section#home #content #details #bio button {
     width: 100px;
     height: 40px;
-    font-family: Tw Cen MT;
-    font-size: 22px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
     font-weight: bold;
     border: none;
     border-radius: 5px;
@@ -200,12 +257,13 @@ section#home #content #details #bio button:hover {
 
 section#home #content #details #bio #contact_me {
     width: 130px;
-    color: #007BC2;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
 }
 
 section#home #content #details #bio #resume {
-    background-color: #009688;;
-    color: var(--default-white-color);
+    background-color: var(--accent-color);
+    color: var(--background-color);
     margin-left: 20px;
 }
 
@@ -216,7 +274,8 @@ section#home #content #details #social_media {
 }
 
 section#home #content #details #social_media .icon {
-    font-size: 2.5rem;
+    color: var(--accent-color);
+    font-size: 3rem;
     margin: 15px;
 }
 
@@ -240,14 +299,14 @@ section#skills .wraper .skillsets .icon-wraper .title-icon {
 }
 
 section#skills .wraper .skillsets .icon-wraper h1 {
-    font-family: Open Sans;
+    font-family: 'Titillium Web', sans-serif;
     font-size: 32px;
     color: var(--default-white-color);
     margin-top: 15px;
 }
 
 section#skills .wraper .skillsets .icon-wraper .icon {
-    color: var(--default-white-color);
+    color: var(--accent-color);
     font-size: 60px;
     background-color: #1E1E1E;
     padding: 20px;
@@ -265,35 +324,44 @@ section#projects .wraper .title .urdu {
 }
 
 section#projects .wraper #projects_card {
-    height: 60vh;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+    height: 60vh;
 }
 
 section#projects .wraper #projects_card .card {
-    padding: 20px;
-    width: 230px;
-    height: 350px;
-    text-align: center;
+    background-image: url("../Images/cover1.jpg");
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 97%;
+    height: 55%;
+    /* padding: 20px; */
+    /* text-align: center; */
     border-radius: 10px;
-    background-color: #1E1E1E;
+    /* background-color: #1E1E1E; */
 }
 
 section#projects .wraper #projects_card .card .cover {
-    height: 20vh;
+    height: 55%;
 }
 
 section#projects .wraper #projects_card .card .details-options {
-    height: 10vh;
+    box-sizing: border-box;
+    height: 45%;
+    background-color: #00000071;
+    padding:  10px 0 0 20px;
+    border-radius: 10px 10px 0 0;
 }
 
 section#projects .wraper #projects_card .card .details-options h2 {
     color: var(--default-white-color);
-    font-family: Open Sans;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
-    text-align: justify;
 }
 
 section#projects .wraper #projects_card .card .details-options button {
@@ -301,14 +369,15 @@ section#projects .wraper #projects_card .card .details-options button {
     border: none;
     border-radius: 5px;
     padding: 0 15px;
-    margin: 20px 0 0 0;
+    margin: 10px 10px 0 0;
     font-size: 15px;
-    font-family: Open Sans;
+    font-family: 'Titillium Web', sans-serif;
     font-weight: bold;
     color: var(--default-white-color);
-    background-color: var(--default-black-color);
+    background-color: var(--secondary-color);
 }
 
 section#projects .wraper #projects_card .card .details-options button:hover {
+    background-color: var(--primary-color);
     cursor: pointer;
 }

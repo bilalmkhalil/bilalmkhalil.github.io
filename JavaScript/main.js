@@ -53,3 +53,17 @@ nav.addEventListener('click', function(e){
         });
     }
 })
+
+const menu = document.querySelectorAll('.nav-link');
+
+menu.forEach((tab) => {
+    tab.addEventListener('click', () => {
+        menu.forEach((otherTab) => {
+            if ( tab !== otherTab) {
+                otherTab.parentNode.classList.remove('active-page');
+            }
+        });
+
+        tab.parentNode.classList.add('active-page');
+    });
+});
