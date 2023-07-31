@@ -354,7 +354,7 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 390px) {
 
     section {
         height: auto;
@@ -367,7 +367,7 @@ section#projects .wraper #projects_card .card .details-options button:hover {
 
     section#home header #header_wraper h2 {
         margin-bottom: 20px;
-        font-size: 31px;
+        font-size: 30px;
         text-align: center;
     }
 
@@ -396,7 +396,7 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     }
     
     section#home #content #details #bio #name {
-        font-size: 36px;
+        font-size: 34px;
     }
     
     section#home #content #details #bio #job {
