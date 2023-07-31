@@ -354,19 +354,20 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
 
     section {
         height: auto;
     }
 
     section#home header #header_wraper {
+        padding: 30px 0 0 0;
         display: block;
     }
 
     section#home header #header_wraper h2 {
-        margin-bottom: 15px;
-        font-size: 37px;
+        margin-bottom: 20px;
+        font-size: 31px;
         text-align: center;
     }
 
@@ -395,7 +396,7 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     }
     
     section#home #content #details #bio #name {
-        font-size: 44px;
+        font-size: 36px;
     }
     
     section#home #content #details #bio #job {
@@ -412,16 +413,16 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     }
     
     section#home #content #details #bio #contact_me {
-        width: 47%;
+        width: 46%;
     }
     
     section#home #content #details #bio #resume {
-        width: 47%;
+        width: 46%;
         margin-left: 20px;
     }
     
     section#home #content #details #social_media {
-        margin-top: 20px;
+        margin-top: 15px;
         display: block;
         text-align: center;
         display: grid;
@@ -430,6 +431,6 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     
     section#home #content #details #social_media .icon {
         color: var(--accent-color);
-        font-size: 6rem;
+        font-size: 5rem;
     }
 }
