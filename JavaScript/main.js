@@ -1,39 +1,3 @@
-
-// let sections = document.querySelectorAll("section");
-
-// let options = {
-// 	root: null,
-// 	treshold: 1,
-// 	rootMargin: "-1px 0px -1px 0px"
-// }
-
-// const observer = new IntersectionObserver((entries, observer) => {
-// 	entries.forEach(entry => {
-// 		if(entry.isIntersecting) {
-// 			console.log(entry);
-// 		}
-// 	});
-// }, options);
-
-// sections.forEach(section => {
-// 	observer.observe(section);
-// });
-
-// let perc = [80, 80, 75, 75, 70, 70];
-
-// let progressBars = document.querySelectorAll("#progress");
-// let perc_indicator = document.querySelectorAll("#perc_indicator");
-
-// for (let i = 0; i < progressBars.length; i++) {
-// 	progressBars[i].value = perc[i];
-// 	perc_indicator[i].innerHTML = perc[i] + "%";
-// }
-
-
-// progressBars.forEach((progress) => {
-// 	progress.value;
-// })
-
 const nav = document.querySelector('.nav');
 const homeSection = document.querySelector('#home');
 const skillsSection = document.querySelector('#skills');
@@ -65,5 +29,22 @@ menu.forEach((tab) => {
         });
 
         tab.parentNode.classList.add('active-page');
+    });
+});
+
+const social_media_links = {
+    linkedin: 'https://www.linkedin.com/in/bilal-khalil-khankhail/',
+    github: 'https://github.com/bilalmkhalil',
+    twitter: 'https://twitter.com/its_khankhail',
+};
+
+const social_media = document.querySelectorAll('.social_media_link');
+
+social_media.forEach((link) => {
+    link.addEventListener('click', () => {
+        const social_media_class = link.classList[3];
+        const social_media_name = social_media_class.split('-')[1];
+
+        window.location.href = social_media_links[social_media_name];
     });
 });
