@@ -78,15 +78,34 @@ section#projects {
     top: 0.95em;
     left: 0.5em;
     font-size: 7rem;
+    transform: translateX(-500px);
+}
+
+.title-text.front.show {
+    transform: translateX(-500px);
+    animation: frontSlideIn 1s ease-in-out 0.2s forwards;
+}
+.title-text.front.hide {
+    transform: translateX(0);
+    animation: frontSlideOff 1s ease-in-out forwards;
 }
 
 .back {
     color: var(--faded-title-color);
     font-size: 18rem;
     font-family: 'Titillium Web', sans-serif;
-    /* font-family: Open Sans; */
     position: relative;
     z-index: 1;
+    transform: translateY(150px);
+}
+
+.title-text.back.show {
+    transform: translateY(150px);
+    animation: backSlideUp 1s ease-in-out 0.2s forwards;
+}
+.title-text.back.hide {
+    transform: translateY(0);
+    animation: backSlideOff 1s ease-in-out forwards;
 }
 
 .urdu {
@@ -98,10 +117,75 @@ section#projects {
     top: 0.95em;
     left: 3.5em;
     z-index: 1;
+    transform: translateX(700px);
+}
+
+.title-text.urdu.show {
+    transform: translateX(700px);
+    animation: urduSlideIn 1s ease-in-out 0.2s forwards;
+}
+.title-text.urdu.hide {
+    transform: translateX(0);
+    animation: urduSlideOff 1s ease-in-out forwards;
+}
+
+@keyframes urduSlideIn {
+    0% {
+      transform: translateX(700px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes urduSlideOff {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(700px);
+    }
+}
+
+@keyframes frontSlideIn {
+    0% {
+      transform: translateX(-500px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes frontSlideOff {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-500px);
+    }
+}
+
+@keyframes backSlideUp {
+    0% {
+      transform: translateY(150px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+@keyframes backSlideOff {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(150px);
+    }
 }
 
 /*============== Home ==============*/
 section#home header {
+    background-color: #0d0d0da3;
     width: 100%;
     position: fixed;
     z-index: 3;
@@ -206,7 +290,19 @@ section#home #content #details #bio #name-container .name {
 }
 
 section#home #content #details #bio #job {
+    width: fit-content;
+    position: relative;
     margin-top: 5px;
+    overflow: hidden;
+}
+
+section#home #content #details #bio #job .block {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 30px;
+    background-color: #CB1A2C;
+    animation: slideOn 4.5s infinite;
 }
 
 section#home #content #details #bio span#country {
@@ -300,6 +396,10 @@ section#skills .wraper .skillsets .icon-wraper .icon {
     background-color: #1E1E1E;
     padding: 20px;
     border-radius: 10px;
+}
+
+section#skills .wraper .skillsets .icon-wraper .icon:not(i:nth-of-type(1),i:nth-of-type(5)) {
+    padding: 20px 25px;
 }
 
 section#skills .wraper .skillsets .icon-wraper i:not(i:nth-of-type(1), i:nth-of-type(2)) {

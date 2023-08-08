@@ -1,3 +1,5 @@
+// making animation on scroll smooth
+
 const nav = document.querySelector('.nav');
 const homeSection = document.querySelector('#home');
 const skillsSection = document.querySelector('#skills');
@@ -18,6 +20,8 @@ nav.addEventListener('click', function(e){
     }
 })
 
+// showing which menu page is active
+
 const menu = document.querySelectorAll('.nav-link');
 
 menu.forEach((tab) => {
@@ -31,6 +35,8 @@ menu.forEach((tab) => {
         tab.parentNode.classList.add('active-page');
     });
 });
+
+// making icon clickable and redirecting to social media links
 
 const social_media_links = {
     linkedin: 'https://www.linkedin.com/in/bilal-khalil-khankhail/',
@@ -47,4 +53,27 @@ social_media.forEach((link) => {
 
         window.location.href = social_media_links[social_media_name];
     });
+});
+
+// observering section inetersection
+
+const titles = document.querySelectorAll(".title");
+
+const observer = new IntersectionObserver( (entries) => {
+    entries.forEach((entry) => {
+        for (let text of entry.target.children) {
+            console.log(text)
+            text.classList.toggle("show", entry.isIntersecting);
+            text.classList.toggle("hide", !entry.isIntersecting);
+        }
+    });
+  },
+  {
+    threshold: 1,
+    rootMargin: "0px 0px -80px 0px",
+  }
+);
+
+titles.forEach((title) => {
+  observer.observe(title);
 });
