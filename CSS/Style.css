@@ -8,6 +8,7 @@
 html, body {
     box-sizing: border-box;
     height: 100%;
+    /* width: 100%; */
     /* overflow-y: hidden; */
 }   
 
@@ -25,9 +26,33 @@ html::-webkit-scrollbar {
     --faded-title-color: #222222;
 
     --text-color: #f0f0f0;
-    --background-color: #0D0D0D;
+    --background-color: #ffffff;
     --primary-color: #595959;
     --secondary-color: #1f1f1f;
+    --accent-color: #FAA916;
+}
+
+.dark {
+    --text-color: #f0f0f0;
+    --background-color: #07070A;
+    --primary-color: #595959;
+    --secondary-color: #1f1f1f;
+    --accent-color: #595959;
+}
+
+/* .cream {
+    --text-color: #1f1f1f;
+    --background-color: #fefae0;
+    --primary-color: #1f1f1f;
+    --secondary-color: #1f1f1f;
+    --accent-color: #1f1f1f;
+} */
+
+.purple {
+    --text-color: #f0f0f0;
+    --background-color: #662C91;
+    --primary-color: #07070A;
+    --secondary-color: #07070A;
     --accent-color: #FAA916;
 }
 
@@ -41,21 +66,27 @@ html::-webkit-scrollbar {
 /*============== Body Globals ==============*/
 
 section {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100%;
     overflow: hidden;
 }
 
 section#home {
-    background-color: var(--home-background-color);
+    display: grid;
+    justify-items: end;
+    background-color: var(--background-color);
 }
 
 section#skills {
-    background-color: var(--home-background-color);
+    background-color: var(--background-color);
 }
 
 section#projects {
-    background-color: var(--home-background-color);
+    background-color: var(--background-color);
+}
+
+section#popup-projects {
+    background-color: var(--background-color);
 }
 
 .wraper {
@@ -109,7 +140,7 @@ section#projects {
 }
 
 .urdu {
-    color: #FAA916;
+    color: var(--accent-color);
     position: absolute;
     font-family: Aadil;
     direction: rtl;
@@ -185,7 +216,7 @@ section#projects {
 
 /*============== Home ==============*/
 section#home header {
-    background-color: #0d0d0da3;
+    /* background-color: #0d0d0da3; */
     width: 100%;
     position: fixed;
     z-index: 3;
@@ -236,7 +267,7 @@ section#home header #header_wraper #menu {
 }
 
 .active-page a {
-    color: var(--background-color);
+    color: var(--text-color);
 }
 
 section#home #content {
@@ -263,10 +294,9 @@ section#home #content #profile_picture {
 section#home #content #details {
     width: 100%;
     height: 400px;
-    /* background-color: lightgoldenrodyellow; */
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    /*justify-items: center;*/
+    grid-template-columns: 9fr 1fr;
+    grid-column-gap: 20px;
     align-items: center;
     color: #ffffff;
 }
@@ -344,6 +374,8 @@ section#home #content #details #social_media {
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
 }
 
 section#home #content #details #social_media .icon {
@@ -367,6 +399,37 @@ section#home #content #details #social_media .icon:hover {
     /* 75% {
       transform: translatey(-210px);
     } */
+}
+
+section#home #themes {
+    display: grid;
+    grid-template-rows: 1fr 4fr 2fr;
+    justify-items: center;
+    height: 100vh;
+    position: fixed;
+    color: white;
+    /* background-color: #CB1A2C; */
+}
+
+section#home #themes h1 {
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    font-size: 40px;
+    padding: 20px;
+    font-family: "Titillium Web", sans-serif;
+}
+
+section#home #themes .color-schemes {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+section#home #themes .color-schemes .color {
+    width: 50px;
+    height: 50px;
+    background-color: chocolate;
+    border-radius: 50%;
 }
 
 /*============== Skills ==============*/
@@ -470,6 +533,25 @@ section#projects .wraper #projects_card .card .details-options button:hover {
     background-color: var(--primary-color);
     cursor: pointer;
 }
+
+
+/*============== Popup Projects ==============*/
+
+section#popup-projects {
+    padding: 50px;
+}
+
+section#popup-projects h1 {
+    font-size: 50px;
+    color: var(--text-color);
+}
+
+section#popup-projects .icons {
+    color: var(--text-color);
+    font-size: 45px;
+}
+
+
 
 @media (max-width: 390px) {
 
@@ -586,6 +668,31 @@ section#projects .wraper #projects_card .card .details-options button:hover {
         50% {
           transform: translatey(-91px);
         }
+    }
+
+    section#home #themes {
+        bottom: 20px;
+        right: 20px;
+        /* display: inline-flex; */
+        /* grid-template-columns: 1fr 4fr 2fr; */
+        /* position: fixed; */
+    }
+    
+    section#home #themes h1 {
+        display: none;
+    }
+    
+    section#home #themes .color-schemes {
+        /* display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center; */
+    }
+    
+    section#home #themes .color-schemes .color {
+        /* width: 50px;
+        height: 50px;
+        background-color: chocolate;
+        border-radius: 50%; */
     }
 
     /*============== Skills ==============*/
