@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=REM:wght@300&family=Space+Grotesk&family=Titillium+Web:wght@600&display=swap');
 
 
+html::-webkit-scrollbar {
+    display: none;
+}
+
 .dark {
     --text-color: #f0f0f0;
     --background-color: #07070A;
@@ -11,7 +15,7 @@
 }
 
 body {
-    padding: 0;
+    padding: 0 30px;
     margin: 0;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -30,9 +34,9 @@ div#header h3 {
 div#header #filterby .icon {
     padding: 10px 15px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 5px;
-    background-color: var(--accent-color);
+    background-color: #1e1e1e;
 }
 
 div#header #filterby .icon:hover {
@@ -46,4 +50,70 @@ div#header #filterby .icon:not(:first-child) {
 
 span.label {
     font-family: 'Titillium Web', sans-serif;
+}
+
+div#projects {
+    padding: 20px 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+div#projects .card {
+    width: fit-content;
+    /* padding: 20px; */
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    overflow: hidden;
+}
+
+div#projects .card .cover {
+    width: 300px;
+}
+
+div#projects .card .card-detail {
+    padding: 0 15px 15px 15px;
+}
+
+div#projects .card .card-detail h2 {
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+div#projects .card .card-detail p {
+    margin: 5px 0 20px 0;
+}
+
+div#projects .card .card-detail .tags {
+    margin: 10px 0;
+}
+
+div#projects .card .card-detail .tags .icon {
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 3px;
+    background-color: var(--accent-color);
+}
+
+div#projects .card .card-detail .tags .icon:not(:first-child) {
+    margin-left: 10px;
+}
+
+div#projects .card .card-detail .buttons {
+    margin: 20px 0 0 0;
+}
+
+div#projects .card .card-detail .buttons .button {
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--text-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: var(--accent-color);
+}
+
+div#projects .card .card-detail .buttons .button:not(:first-child) {
+    margin-left: 10px;
 }

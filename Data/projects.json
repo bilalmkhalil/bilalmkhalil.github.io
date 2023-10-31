@@ -4,6 +4,7 @@
             "name": "Project 1",
             "description": "This is the first project",
             "technologies": ["HTML", "CSS", "JavaScript"],
+            "image_src": "../images/xyz.png",
             "github_url": "https://github.com/user/project1",
             "demo_url": "https://user.github.io/project1"
         },
