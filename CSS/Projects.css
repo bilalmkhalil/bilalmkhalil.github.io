@@ -61,7 +61,7 @@ div#projects {
     padding: 20px 10px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    gap: 30px;
+    gap: 20px;
 }
 
 div#projects .card {
@@ -76,9 +76,9 @@ div#projects .card {
 }
 
 div#projects .card .cover {
+    width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
-    width: 300px;
 }
 
 div#projects .card .card-detail {
@@ -94,16 +94,17 @@ div#projects .card .card-detail p {
     margin: 5px 0 20px 0;
 }
 
+div#projects .card .card-detail h4 {
+    margin-bottom: 0;
+}
+
 div#projects .card .card-detail .tags {
-    margin: 10px 0;
+    margin: 3px 0 10px 0;
 }
 
 div#projects .card .card-detail .tags .icon {
-    padding: 5px 10px;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 3px;
-    background-color: var(--accent-color);
+    /* padding: 10px; */
+    font-size: 17px;
 }
 
 div#projects .card .card-detail .tags .icon:not(:first-child) {
@@ -115,7 +116,7 @@ div#projects .card .card-detail .buttons {
 }
 
 div#projects .card .card-detail .buttons .button {
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'Titillium Web', sans-serif;
     color: var(--text-color);
     padding: 10px 15px;

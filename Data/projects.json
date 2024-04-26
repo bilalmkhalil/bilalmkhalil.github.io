@@ -1,19 +1,19 @@
 {
     "projects": [
         {
-            "name": "Project 1",
+            "name": "Todo App",
             "description": "This is the first project",
             "technologies": ["HTML", "CSS", "JavaScript"],
-            "image_src": "../images/xyz.png",
-            "github_url": "https://github.com/user/project1",
-            "demo_url": "https://user.github.io/project1"
+            "image_src": "../images/todo.png",
+            "github_url": "https://github.com/bilalmkhalil/Todo-App",
+            "demo_url": "https://bilalmkhalil.github.io/Todo-App/"
         },
         {
-            "name": "Project 2",
+            "name": "Todo App (Java GUI)",
             "description": "This is the second project",
             "technologies": ["React", "Node.js", "MongoDB"],
-            "github_url": "https://github.com/user/project2",
-            "demo_url": "https://user.github.io/project2"
+            "github_url": "https://github.com/bilalmkhalil/Todo-Java-GUI-App",
+            "demo_url": "none"
         },
         {
             "name": "Project 3",

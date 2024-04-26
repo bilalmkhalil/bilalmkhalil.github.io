@@ -77,3 +77,47 @@ const observer = new IntersectionObserver( (entries) => {
 titles.forEach((title) => {
   observer.observe(title);
 });
+
+
+// fetching data from json api
+
+const projects = document.querySelector('.projects');
+
+fetch("https://raw.githubusercontent.com/bilalmkhalil/bilalmkhalil.github.io/main/Data/projects.json")
+    .then(response => response.json())
+    .then(data => {
+        data.projects.forEach((project) => {
+            console.log(project)
+        })
+    })
+    .catch(error => console.log(error))
+
+    
+// creating project cards
+    
+const createCard = (data) => {
+    return `
+        <div class="card">
+            <img class="cover" src="${data.image_url}" alt="${data.image_alt}">
+            <div class="card-detail">
+                <h2 class="project-title">${data.title}</h2>
+                <p class="project-description">${data.description}</p>
+                <div class="tags">
+                    <i class="icon html fab fa-html5">
+                        <span class="label">${data.html}</span>
+                    </i>
+                    <i class="icon css fab fa-css3-alt">
+                        <span class="label">${data.css}</span>
+                    </i>
+                    <i class="icon javascript fab fa-js-square">
+                        <span class="label">${data.javascript}</span>
+                    </i>
+                </div>
+                <div class="buttons">
+                    <button class="button" href="${data.demo_url}">Live Demo</button>
+                    <button class="button" href="${data.github_url}>Source Code</button>
+                </div>
+            </div>
+        </div>
+    `;
+}
